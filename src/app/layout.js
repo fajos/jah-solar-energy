@@ -35,6 +35,11 @@ export const metadata = {
     telephone: "+2347035362804",
     email: "jaholaomo@gmail.com",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     locale: "en_NG",
