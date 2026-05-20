@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://jah-solar-energy.vercel.app"), // Update this when custom domain is added
+  metadataBase: new URL("https://jahsolarenergy.com/"), // Update this when custom domain is added
   title: {
     default: "Jah Solar Energy & Electrical | Solar Installation Lagos, Nigeria",
     template: "%s | Jah Solar Energy & Electrical",
@@ -75,8 +75,12 @@ export const metadata = {
     // google: "your-google-site-verification-code",
   },
   alternates: {
-    canonical: "https://jah-solar-energy.vercel.app",
+    canonical: "https://jahsolarenergy.com/",
   },
+};
+
+export const viewport = {
+  themeColor: "#eab308", // Yellow to match brand
 };
 
 export default function RootLayout({ children }) {
