@@ -71,7 +71,7 @@ export default function SolarPage() {
               Solar Installation Services
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Expert solar solutions for homes and businesses in Lagos. Power your world with the sun.
+              Expert solar solutions for homes and businesses in Nigeria. Power your world with the sun.
             </p>
           </motion.div>
         </div>

@@ -10,7 +10,7 @@ export default function ElectricalPage() {
     {
       icon: <Home className="w-8 h-8" />,
       title: "House Wiring & Rewiring",
-      desc: "Safe, code-compliant electrical wiring for new constructions and renovations across Lagos.",
+      desc: "Safe, code-compliant electrical wiring for new constructions and renovations across Nigeria.",
       features: ["Full house wiring", "Partial rewiring", "Conduit & surface wiring", "Safety certificate issued"],
       gradient: "from-blue-50 to-cyan-50",
       border: "border-blue-200",
@@ -30,12 +30,22 @@ export default function ElectricalPage() {
     {
       icon: <Wrench className="w-8 h-8" />,
       title: "Repairs & Troubleshooting",
-      desc: "Fast diagnosis and repair of electrical faults. Emergency service available across Lagos.",
+      desc: "Fast diagnosis and repair of electrical faults. Emergency service available across Nigeria.",
       features: ["Short circuit repairs", "Breaker replacement", "Earthing/grounding", "Same-day response"],
       gradient: "from-green-50 to-emerald-50",
       border: "border-green-200",
       iconBg: "bg-green-600",
       accent: "text-green-600",
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Transformer Installation",
+      desc: "Expert installation, maintenance, and repair of distribution transformers for industrial and commercial applications across Nigeria.",
+      features: ["Step-up & step-down transformers", "Distribution transformer setup", "Oil-filled & dry-type units", "Preventive maintenance"],
+      gradient: "from-purple-50 to-pink-50",
+      border: "border-purple-200",
+      iconBg: "bg-purple-600",
+      accent: "text-purple-600",
     },
   ];
 
@@ -64,7 +74,7 @@ export default function ElectricalPage() {
               Electrical Services
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Professional electrical installations, repairs, and maintenance across Nigeria.
+              Professional electrical installations, transformer setup, repairs, and maintenance across Nigeria.
             </p>
           </motion.div>
         </div>
@@ -85,7 +95,7 @@ export default function ElectricalPage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, i) => (
               <AnimateOnScroll key={i}>
                 <div className={`bg-linear-to-br ${service.gradient} rounded-2xl p-8 border ${service.border} hover:shadow-xl transition-all duration-500 group hover:-translate-y-1`}>

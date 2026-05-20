@@ -1,8 +1,8 @@
 export const metadata = {
-  title: "Electrical Services",
+  title: "Electrical & Transformer Services",
   description:
-    "Professional electrical services in Lagos. House wiring, industrial electrical works, repairs, and maintenance. Licensed electrical engineer.",
-  keywords: "electrical services lagos, house wiring nigeria, electrician lagos, industrial electrical, electrical repairs lagos",
+    "Professional electrical services and transformer installation in Lagos. House wiring, industrial electrical works, distribution transformers, repairs, and maintenance.",
+  keywords: "electrical services lagos, transformer installation lagos, house wiring nigeria, electrician lagos, industrial electrical, distribution transformer, electrical repairs lagos",
   alternates: {
     canonical: "/electrical",
   },

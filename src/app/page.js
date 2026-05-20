@@ -163,7 +163,7 @@ export default function Home() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: <Sun className="w-6 h-6" />,
@@ -208,6 +208,21 @@ export default function Home() {
                   "Troubleshooting & repairs",
                   "Battery replacement",
                   "Emergency call-out service",
+                ],
+              },
+              {
+                icon: <Zap className="w-6 h-6" />,
+                bgGradient: "from-purple-50 to-pink-50",
+                border: "border-purple-200",
+                iconBg: "bg-purple-600",
+                accentColor: "text-purple-600",
+                link: "/electrical",
+                title: "Transformer Installation",
+                items: [
+                  "Step-up & step-down units",
+                  "Distribution transformers",
+                  "Industrial & commercial",
+                  "Maintenance & repairs",
                 ],
               },
             ].map((service, i) => (
