@@ -1,56 +1,76 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { Sun, MapPin, ArrowRight, Zap } from "lucide-react";
+import { MapPin, ArrowRight, Zap, Expand } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
+import Lightbox from "@/components/Lightbox";
 
 export default function ProjectsPage() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
   const projects = [
     {
-      image: "/landmark-vi.jpg",
+      image: "/images/landmark-vi.jpg",
       title: "12kva and 6kva inverter — Landmark",
       desc: "12kva Hybrid Felicity and 6kva Hybrid Felicity Inverter with lithium battery backup.",
       location: "Landmark, Victoria Island",
       category: "Solar",
     },
     {
-      image: "/images/projects/surulere-office.jpg",
+      src: "/images/projects/surulere-office.jpg",
       title: "10kW Commercial Setup — Surulere Office",
-      desc: "12kva Hybrid Felicity and 6kva Hybrid Felicity Inverter",
-      location: "Landmark, Victory Island",
+      desc: "Grid-tied solar system for a 20-person office, reducing generator dependency by 80%.",
+      location: "Surulere, Lagos",
       category: "Solar",
     },
     {
-      image: "/images/projects/lekki-wiring.jpg",
+      src: "/images/projects/lekki-wiring.jpg",
       title: "House Rewiring — Lekki Phase 1",
       desc: "Complete electrical rewiring of a 4-bedroom bungalow, including DB installation.",
       location: "Lekki, Lagos",
       category: "Electrical",
     },
     {
-      image: "/images/projects/yaba-inverter.jpg",
+      src: "/images/projects/yaba-inverter.jpg",
       title: "5kW Inverter System — Yaba",
       desc: "Inverter and battery backup system for a 3-bedroom flat with remote monitoring.",
       location: "Yaba, Lagos",
       category: "Solar",
     },
     {
-      image: "/images/projects/ikeja-db.jpg",
+      src: "/images/projects/ikeja-db.jpg",
       title: "Industrial DB Setup — Ikeja Warehouse",
       desc: "3-phase distribution board installation for a 500sqm warehouse facility.",
       location: "Ikeja, Lagos",
       category: "Electrical",
     },
     {
-      image: "/images/projects/vi-maintenance.jpg",
+      src: "/images/projects/vi-maintenance.jpg",
       title: "Solar Maintenance — Victoria Island",
       desc: "Quarterly maintenance and panel cleaning for a 20kW commercial system.",
       location: "Victoria Island, Lagos",
       category: "Maintenance",
     },
   ];
+
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => setLightboxOpen(false);
+
+  const nextImage = () => {
+    setLightboxIndex((prev) => (prev + 1) % projects.length);
+  };
+
+  const prevImage = () => {
+    setLightboxIndex((prev) => (prev - 1 + projects.length) % projects.length);
+  };
 
   return (
     <main className="min-h-screen">
@@ -88,7 +108,7 @@ export default function ProjectsPage() {
                 Recent Work
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto text-lg">
-                Every project is a testament to our commitment to quality and reliability.
+                Every project is a testament to our commitment to quality and reliability. Click any image to view full size.
               </p>
             </div>
           </AnimateOnScroll>
@@ -97,10 +117,14 @@ export default function ProjectsPage() {
             {projects.map((project, i) => (
               <AnimateOnScroll key={i}>
                 <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:shadow-yellow-500/5 transition-all duration-500 group hover:-translate-y-1">
-                  {/* Image */}
-                  <div className="relative h-56 bg-linear-to-br from-yellow-400 to-orange-500 overflow-hidden">
+                  {/* Image - Clickable */}
+                  <button
+                    onClick={() => openLightbox(i)}
+                    className="relative h-56 bg-linear-to-br from-yellow-400 to-orange-500 overflow-hidden w-full cursor-zoom-in"
+                    aria-label={`View ${project.title} full size`}
+                  >
                     <Image
-                      src={project.image}
+                      src={project.src}
                       alt={project.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -112,7 +136,11 @@ export default function ProjectsPage() {
                         {project.category}
                       </span>
                     </div>
-                  </div>
+                    {/* Expand icon on hover */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                      <Expand className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  </button>
 
                   {/* Content */}
                   <div className="p-6">
@@ -165,6 +193,22 @@ export default function ProjectsPage() {
           </AnimateOnScroll>
         </div>
       </section>
+
+      {/* ===== LIGHTBOX ===== */}
+      {lightboxOpen && (
+        <Lightbox
+          images={projects.map((p) => ({
+            src: p.src,
+            alt: p.title,
+            title: p.title,
+            location: p.location,
+          }))}
+          currentIndex={lightboxIndex}
+          onClose={closeLightbox}
+          onPrev={prevImage}
+          onNext={nextImage}
+        />
+      )}
     </main>
   );
 }

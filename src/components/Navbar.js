@@ -62,7 +62,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2 group shrink-0">
               <div className="relative w-8 h-8 lg:w-10 lg:h-10">
                 <Image
-                  src="/jah-logo.png"
+                  src="/images/jah-logo.png"
                   alt="Jah Solar Energy and Electrical"
                   fill
                   className="object-contain transition-all duration-700 group-hover:scale-110"
