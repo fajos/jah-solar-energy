@@ -3,6 +3,7 @@
 import { Phone, Mail, MapPin, Clock, Send, Sun, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
+import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -125,68 +126,7 @@ export default function ContactPage() {
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
                   Send a Message
                 </h2>
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    // Form handling will be added later
-                    alert("Thank you! We'll get back to you shortly. For faster response, please use WhatsApp.");
-                  }}
-                  className="space-y-5"
-                >
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all duration-300 hover:border-yellow-300"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all duration-300 hover:border-yellow-300"
-                      placeholder="080X XXX XXXX"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Service Needed
-                    </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all duration-300 bg-white hover:border-yellow-300">
-                      <option>Solar Installation</option>
-                      <option>Electrical Works</option>
-                      <option>Maintenance / Repairs</option>
-                      <option>Consultation Only</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      rows={4}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all duration-300 hover:border-yellow-300 resize-none"
-                      placeholder="Describe your project or need..."
-                    ></textarea>
-                  </div>
-                  <motion.button
-                    type="submit"
-                    className="inline-flex items-center gap-2 bg-linear-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 w-full justify-center shadow-xl shadow-yellow-500/25 hover:shadow-yellow-500/40"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Send className="w-5 h-5" />
-                    Send Message
-                  </motion.button>
-                </form>
+                <ContactForm />
               </div>
             </AnimateOnScroll>
           </div>

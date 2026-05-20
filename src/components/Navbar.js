@@ -71,7 +71,7 @@ export default function Navbar() {
               <span
                 className={`font-bold text-sm lg:text-base transition-colors duration-500 ${textColor} ${textHover}`}
               >
-                Jah Solar Energy
+                Jah Solar Energy and Electrical
               </span>
             </Link>
 

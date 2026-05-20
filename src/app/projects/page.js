@@ -9,17 +9,17 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function ProjectsPage() {
   const projects = [
     {
-      image: "/images/projects/ikoyi-solar.jpg",
-      title: "15kW Solar System — Ikoyi Residence",
-      desc: "Full off-grid solar installation for a 6-bedroom duplex with lithium battery backup.",
-      location: "Ikoyi, Lagos",
+      image: "/landmark-vi.jpg",
+      title: "12kva and 6kva inverter — Landmark",
+      desc: "12kva Hybrid Felicity and 6kva Hybrid Felicity Inverter with lithium battery backup.",
+      location: "Landmark, Victoria Island",
       category: "Solar",
     },
     {
       image: "/images/projects/surulere-office.jpg",
       title: "10kW Commercial Setup — Surulere Office",
-      desc: "Grid-tied solar system for a 20-person office, reducing generator dependency by 80%.",
-      location: "Surulere, Lagos",
+      desc: "12kva Hybrid Felicity and 6kva Hybrid Felicity Inverter",
+      location: "Landmark, Victory Island",
       category: "Solar",
     },
     {
