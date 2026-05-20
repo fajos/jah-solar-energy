@@ -6,6 +6,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://jah-solar-energy.vercel.app/sitemap.xml", // Update with custom domain
+    sitemap: "https://jahsolarenergy.com/", // Update with custom domain
   };
 }

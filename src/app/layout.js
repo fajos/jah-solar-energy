@@ -38,7 +38,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://jah-solar-energy.vercel.app",
+    url: "https://jahsolarenergy.com/",
     siteName: "Jah Solar Energy & Electrical",
     title: "Jah Solar Energy & Electrical | Solar Installation Lagos",
     description:
