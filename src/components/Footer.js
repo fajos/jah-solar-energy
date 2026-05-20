@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Sun className="w-6 h-6 text-yellow-500" />
-              <span className="font-bold text-white text-lg">Jah Solar Energy</span>
+              <span className="font-bold text-white text-lg">Jah Solar Energy and Electrical</span>
             </div>
             <p className="text-sm">
               Your trusted partner for solar and electrical solutions in Lagos, Nigeria.
