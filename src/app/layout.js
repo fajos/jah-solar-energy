@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://jahsolarenergy.com/"), // Update this when custom domain is added
+  metadataBase: new URL("https://jahsolarenergy.com/"),
   title: {
     default: "Jah Solar Energy & Electrical | Solar Installation Lagos, Nigeria",
     template: "%s | Jah Solar Energy & Electrical",

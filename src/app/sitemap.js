@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://jahsolarenergy.com/"; // Update with custom domain
+  const baseUrl = "https://jahsolarenergy.com/";
 
   const pages = ["", "/solar", "/electrical", "/projects", "/contact"];
 

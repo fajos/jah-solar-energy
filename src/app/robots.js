@@ -6,6 +6,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://jahsolarenergy.com/", // Update with custom domain
+    sitemap: "https://jahsolarenergy.com/",
   };
 }
