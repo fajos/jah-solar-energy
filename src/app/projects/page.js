@@ -28,14 +28,14 @@ export default function ProjectsPage() {
       category: "Solar",
     },
     {
-      src: "/images/ayobo.jpeg",
+      src: "/images/ayobo.JPG",
       title: "6kva Hybrid Inverter",
       desc: "Installation of 6kva Hybrid inverter and 2 pieces of 5kWh of Lithium Batteries",
       location: "Ayobo, Lagos",
       category: "Solar",
     },
     {
-      src: "/images/ikorodu.jpeg",
+      src: "/images/ikorodu.JPG",
       title: "12kva off-grid Inverter system with 2 pieces of 17kwh Lithium Batteries",
       desc: "Inverter and battery backup system for a shopping mall at Ikorodu",
       location: "Ikorodu, Lagos",
