@@ -28,14 +28,14 @@ export default function ProjectsPage() {
       category: "Solar",
     },
     {
-      src: "/images/ayobo.jpeg",
+      src: "/images/ayobo.JPG",
       title: "6kva Hybrid Inverter",
       desc: "Installation of 6kva Hybrid inverter and 2 pieces of 5kWh of Lithium Batteries",
       location: "Ayobo, Lagos",
       category: "Solar",
     },
     {
-      src: "/images/ikorodu.jpeg",
+      src: "/images/ikorodu.JPG",
       title: "12kva off-grid Inverter system with 2 pieces of 17kwh Lithium Batteries",
       desc: "Inverter and battery backup system for a shopping mall at Ikorodu",
       location: "Ikorodu, Lagos",
@@ -76,9 +76,16 @@ export default function ProjectsPage() {
     <main className="min-h-screen">
       {/* ===== HERO ===== */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle,#facc15_1px,transparent_1px)] bg-size-[40px_40px] opacity-10"></div>
-        <div className="absolute top-0 right-0 w-100 h-100 bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gowan-estate.JPG"
+            alt="Jah Solar Projects"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gray-900/80"></div>
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div

@@ -2,26 +2,25 @@
 
 import { Sun, Zap, Wrench, ArrowRight, CheckCircle, Users, Plug, House } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* ===== HERO SECTION with Animated Gradient ===== */}
+      {/* ===== HERO SECTION with Background Image ===== */}
 <section className="relative min-h-screen flex items-center overflow-hidden">
-  {/* Animated gradient background */}
-  <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
-    <div className="absolute top-0 right-0 w-75 h-75 sm:w-12 sm:h-125 bg-yellow-500/20 rounded-full blur-3xl animate-pulse"></div>
-    <div className="absolute bottom-0 left-0 w-62.5 h-62.5 sm:w-100 sm:h-100 bg-yellow-600/10 rounded-full blur-3xl animate-pulse"></div>
-    {/* Grid pattern overlay */}
-    <div
-      className="absolute inset-0 opacity-10"
-      style={{
-        backgroundImage: "radial-gradient(circle, #facc15 1px, transparent 1px)",
-        backgroundSize: "40px 40px",
-      }}
-    ></div>
+  {/* Background Image with Overlay */}
+  <div className="absolute inset-0">
+    <Image
+      src="/images/landmark-vi.jpg"
+      alt="Jah Solar Installation"
+      fill
+      className="object-cover"
+      priority
+    />
+    <div className="absolute inset-0 bg-gray-900/85"></div>
   </div>
 
   <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">

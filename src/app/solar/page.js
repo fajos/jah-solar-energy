@@ -2,6 +2,7 @@
 
 import { Sun, Zap, Battery, Home, Building, CheckCircle, ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
@@ -49,30 +50,48 @@ export default function SolarPage() {
   return (
     <main className="min-h-screen">
       {/* ===== HERO ===== */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-yellow-500 to-orange-600"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-size-[30px_30px] opacity-20"></div>
-        <div className="absolute top-0 right-0 w-100 h-100 bg-white/10 rounded-full blur-3xl"></div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-24">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/lagos.JPG"
+            alt="Solar Installation"
+            fill
+            className="object-cover object-right lg:object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
+        </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-2xl"
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="inline-block mb-6"
-            >
-              <Sun className="w-16 h-16 text-white" />
-            </motion.div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-              Solar Installation Services
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+              Reliable <span className="text-yellow-500">Solar</span> Solutions
             </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Expert solar solutions for homes and businesses in Nigeria. Power your world with the sun.
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
+              Cut your electricity bills and enjoy 24/7 power with our expert solar installations.
+              We design and install high-performance systems for homes and businesses across Nigeria.
             </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://wa.me/2347035362804?text=Hello%20Jah%20Solar,%20I%20need%20a%20solar%20consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-400 transition-all shadow-xl shadow-yellow-500/20"
+              >
+                Get Free Quote
+              </a>
+              <Link
+                href="/projects"
+                className="bg-white/10 backdrop-blur border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all"
+              >
+                View Projects
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

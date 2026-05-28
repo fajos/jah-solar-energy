@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone, Mail, MapPin, Clock, Send, Sun, Zap } from "lucide-react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import ContactForm from "@/components/ContactForm";
@@ -10,8 +11,16 @@ export default function ContactPage() {
     <main className="min-h-screen">
       {/* ===== HERO ===== */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-yellow-500 to-orange-600"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-size-[30px_30px] opacity-20"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/ikorodu.jpeg"
+            alt="Contact Jah Solar"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gray-900/80"></div>
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div

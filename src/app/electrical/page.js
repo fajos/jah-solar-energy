@@ -2,6 +2,7 @@
 
 import { Zap, Wrench, Home, Building, AlertTriangle, CheckCircle, ArrowRight, Phone, Shield } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
@@ -53,9 +54,17 @@ export default function ElectricalPage() {
     <main className="min-h-screen">
       {/* ===== HERO ===== */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-700 to-blue-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-size-[30px_30px] opacity-15"></div>
-        <div className="absolute bottom-0 left-0 w-100 h-100 bg-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/rich-land-estate.JPG"
+            alt="Electrical Services"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-blue-900/80 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-black/40"></div>
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div

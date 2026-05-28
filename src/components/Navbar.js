@@ -48,6 +48,7 @@ export default function Navbar() {
     { href: "/solar", label: "Solar Services" },
     { href: "/electrical", label: "Electrical" },
     { href: "/projects", label: "Projects" },
+    { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact" },
   ];
 
