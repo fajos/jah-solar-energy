@@ -13,7 +13,7 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/ikorodu.jpeg"
+            src="/images/ikorodu.JPG"
             alt="Contact Jah Solar"
             fill
             className="object-cover"
